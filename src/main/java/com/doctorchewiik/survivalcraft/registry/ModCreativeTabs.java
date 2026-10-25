@@ -24,6 +24,14 @@ public class ModCreativeTabs {
                         output.accept(ModItems.GOURD_CANTEEN.get().filled(false));
                         output.accept(ModItems.LEATHER_CANTEEN.get().filled(false));
                         output.accept(ModItems.METAL_CANTEEN.get().filled(false));
+                        output.accept(ModItems.PURIFICATION_TABLET.get());
+                        output.accept(ModItems.WATER_FILTER.get());
+                        output.accept(ModItems.HERMETIC_JAR.get());
+                        output.accept(ModItems.ROASTED_COFFEE_BEANS.get());
+                        output.accept(ModItems.COFFEE.get());
+                        output.accept(ModItems.PEBBLE.get());
+                        output.accept(ModItems.FLINT_KNIFE.get());
+                        output.accept(ModItems.FLINT_HATCHET.get());
                     })
                     .build());
 }
