@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "filtering=false": {
+      "model": "survivalcraft:block/water_filter"
+    },
+    "filtering=true": {
+      "model": "survivalcraft:block/water_filter_filtering"
+    }
+  }
+}

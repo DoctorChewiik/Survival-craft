@@ -3,11 +3,17 @@ package com.doctorchewiik.survivalcraft;
 import org.slf4j.Logger;
 
 import com.doctorchewiik.survivalcraft.command.ModCommands;
+import com.doctorchewiik.survivalcraft.fatigue.FatigueEvents;
 import com.doctorchewiik.survivalcraft.network.ModNetworking;
+import com.doctorchewiik.survivalcraft.network.StatsSync;
+import com.doctorchewiik.survivalcraft.primitive.PrimitiveEvents;
 import com.doctorchewiik.survivalcraft.registry.ModAttachments;
+import com.doctorchewiik.survivalcraft.registry.ModBlockEntities;
+import com.doctorchewiik.survivalcraft.registry.ModBlocks;
 import com.doctorchewiik.survivalcraft.registry.ModCreativeTabs;
 import com.doctorchewiik.survivalcraft.registry.ModDataComponents;
 import com.doctorchewiik.survivalcraft.registry.ModItems;
+import com.doctorchewiik.survivalcraft.temperature.TemperatureEvents;
 import com.doctorchewiik.survivalcraft.thirst.ThirstEvents;
 import com.mojang.logging.LogUtils;
 
@@ -24,9 +30,11 @@ public class SurvivalCraft {
     public static final Logger LOGGER = LogUtils.getLogger();
 
     public SurvivalCraft(IEventBus modEventBus, ModContainer modContainer) {
-        // Registres (items, composants de données, données attachées au joueur, onglet créatif)
+        // Registres
         ModDataComponents.DATA_COMPONENTS.register(modEventBus);
         ModAttachments.ATTACHMENT_TYPES.register(modEventBus);
+        ModBlocks.BLOCKS.register(modEventBus);
+        ModBlockEntities.BLOCK_ENTITY_TYPES.register(modEventBus);
         ModItems.ITEMS.register(modEventBus);
         ModCreativeTabs.CREATIVE_MODE_TABS.register(modEventBus);
 
@@ -35,6 +43,10 @@ public class SurvivalCraft {
 
         // Événements de jeu
         ThirstEvents.register(NeoForge.EVENT_BUS);
+        TemperatureEvents.register(NeoForge.EVENT_BUS);
+        FatigueEvents.register(NeoForge.EVENT_BUS);
+        PrimitiveEvents.register(NeoForge.EVENT_BUS);
+        StatsSync.register(NeoForge.EVENT_BUS);
         NeoForge.EVENT_BUS.addListener(ModCommands::register);
 
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
