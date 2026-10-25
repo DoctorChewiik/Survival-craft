@@ -1,0 +1,23 @@
+{
+  "itemGroup.survivalcraft": "Survival Craft",
+  "item.survivalcraft.gourd_canteen": "Gourde en courge",
+  "item.survivalcraft.leather_canteen": "Gourde en cuir",
+  "item.survivalcraft.metal_canteen": "Gourde en métal",
+  "tooltip.survivalcraft.canteen.sips": "Eau : %s/%s gorgées",
+  "tooltip.survivalcraft.canteen.dirty": "Eau sale (risque de maladie)",
+  "tooltip.survivalcraft.canteen.clean": "Eau potable",
+  "tooltip.survivalcraft.canteen.boilable": "Utiliser sur un feu de camp pour faire bouillir l'eau",
+  "commands.survivalcraft.thirst.set": "Soif réglée à %s",
+  "death.attack.survivalcraft.dehydration": "%1$s est mort de soif",
+  "death.attack.survivalcraft.dehydration.player": "%1$s est mort de soif en fuyant %2$s",
+  "survivalcraft.configuration.title": "Configuration de Survival Craft",
+  "survivalcraft.configuration.thirst": "Soif",
+  "survivalcraft.configuration.enabled": "Activer la soif",
+  "survivalcraft.configuration.baseDrainPerTick": "Perte de base par tick",
+  "survivalcraft.configuration.sprintMultiplier": "Multiplicateur en courant",
+  "survivalcraft.configuration.hotBiomeMultiplier": "Multiplicateur en biome chaud",
+  "survivalcraft.configuration.netherMultiplier": "Multiplicateur dans le Nether",
+  "survivalcraft.configuration.slownessThreshold": "Seuil de ralentissement",
+  "survivalcraft.configuration.damageIntervalTicks": "Intervalle des dégâts (ticks)",
+  "survivalcraft.configuration.dirtyWaterSicknessChance": "Chance de maladie (eau sale)"
+}

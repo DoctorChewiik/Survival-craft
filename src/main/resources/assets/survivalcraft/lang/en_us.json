@@ -1,0 +1,23 @@
+{
+  "itemGroup.survivalcraft": "Survival Craft",
+  "item.survivalcraft.gourd_canteen": "Gourd Canteen",
+  "item.survivalcraft.leather_canteen": "Leather Canteen",
+  "item.survivalcraft.metal_canteen": "Metal Canteen",
+  "tooltip.survivalcraft.canteen.sips": "Water: %s/%s sips",
+  "tooltip.survivalcraft.canteen.dirty": "Dirty water (may make you sick)",
+  "tooltip.survivalcraft.canteen.clean": "Drinkable water",
+  "tooltip.survivalcraft.canteen.boilable": "Use on a lit campfire to boil the water",
+  "commands.survivalcraft.thirst.set": "Thirst set to %s",
+  "death.attack.survivalcraft.dehydration": "%1$s died of thirst",
+  "death.attack.survivalcraft.dehydration.player": "%1$s died of thirst while fleeing %2$s",
+  "survivalcraft.configuration.title": "Survival Craft Configuration",
+  "survivalcraft.configuration.thirst": "Thirst",
+  "survivalcraft.configuration.enabled": "Enable thirst",
+  "survivalcraft.configuration.baseDrainPerTick": "Base drain per tick",
+  "survivalcraft.configuration.sprintMultiplier": "Sprint multiplier",
+  "survivalcraft.configuration.hotBiomeMultiplier": "Hot biome multiplier",
+  "survivalcraft.configuration.netherMultiplier": "Nether multiplier",
+  "survivalcraft.configuration.slownessThreshold": "Slowness threshold",
+  "survivalcraft.configuration.damageIntervalTicks": "Damage interval (ticks)",
+  "survivalcraft.configuration.dirtyWaterSicknessChance": "Dirty water sickness chance"
+}
