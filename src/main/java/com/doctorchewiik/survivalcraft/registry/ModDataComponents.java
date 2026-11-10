@@ -3,6 +3,7 @@ package com.doctorchewiik.survivalcraft.registry;
 import java.util.function.Supplier;
 
 import com.doctorchewiik.survivalcraft.SurvivalCraft;
+import com.doctorchewiik.survivalcraft.item.JarContents;
 import com.mojang.serialization.Codec;
 
 import net.minecraft.core.component.DataComponentType;
@@ -27,5 +28,12 @@ public class ModDataComponents {
             () -> DataComponentType.<Boolean>builder()
                     .persistent(Codec.BOOL)
                     .networkSynchronized(ByteBufCodecs.BOOL)
+                    .build());
+
+    // Aliments rangés dans un bocal hermétique
+    public static final Supplier<DataComponentType<JarContents>> JAR_CONTENTS = DATA_COMPONENTS.register("jar_contents",
+            () -> DataComponentType.<JarContents>builder()
+                    .persistent(JarContents.CODEC)
+                    .networkSynchronized(JarContents.STREAM_CODEC)
                     .build());
 }

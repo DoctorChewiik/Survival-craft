@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PCP",
+    "PSP",
+    "PGP"
+  ],
+  "key": {
+    "P": {
+      "tag": "minecraft:planks"
+    },
+    "C": {
+      "item": "minecraft:charcoal"
+    },
+    "S": {
+      "tag": "minecraft:sand"
+    },
+    "G": {
+      "item": "minecraft:gravel"
+    }
+  },
+  "result": {
+    "id": "survivalcraft:water_filter",
+    "count": 1
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "survivalcraft:block/pebble"
+      },
+      {
+        "model": "survivalcraft:block/pebble",
+        "y": 90
+      },
+      {
+        "model": "survivalcraft:block/pebble",
+        "y": 180
+      },
+      {
+        "model": "survivalcraft:block/pebble",
+        "y": 270
+      }
+    ]
+  }
+}

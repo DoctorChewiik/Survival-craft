@@ -17,9 +17,8 @@ public class ThirstData {
     private int thirst;
     private float exhaustion;
 
-    // Non sauvegardés
+    // Non sauvegardé
     int damageTimer;
-    int lastSynced = -1;
 
     public ThirstData() {
         this(MAX, 0f);
@@ -57,10 +56,5 @@ public class ThirstData {
             exhaustion -= 1f;
             setThirst(thirst - 1);
         }
-    }
-
-    // Force un nouvel envoi au client (changement de dimension, etc.)
-    public void markDirty() {
-        lastSynced = -1;
     }
 }

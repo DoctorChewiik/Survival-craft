@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "kind=gourd": {
+      "model": "survivalcraft:block/placed_canteen_gourd"
+    },
+    "kind=leather": {
+      "model": "survivalcraft:block/placed_canteen_leather"
+    },
+    "kind=metal": {
+      "model": "survivalcraft:block/placed_canteen_metal"
+    }
+  }
+}

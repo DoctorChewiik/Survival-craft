@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "survivalcraft:roasted_coffee_beans"
+    },
+    {
+      "item": "minecraft:water_bucket"
+    },
+    {
+      "item": "minecraft:bowl"
+    }
+  ],
+  "result": {
+    "id": "survivalcraft:coffee",
+    "count": 1
+  }
+}

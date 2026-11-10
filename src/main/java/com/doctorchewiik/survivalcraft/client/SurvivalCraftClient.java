@@ -21,7 +21,11 @@ public class SurvivalCraftClient {
     }
 
     private static void registerGuiLayers(RegisterGuiLayersEvent event) {
-        // Les gouttes de soif s'affichent juste au-dessus de la barre de faim
-        event.registerAbove(VanillaGuiLayers.FOOD_LEVEL, SurvivalCraft.id("thirst"), ThirstHud::render);
+        // Soif juste au-dessus de la faim, énergie juste au-dessus de la vie, température en bas à gauche
+        event.registerAbove(VanillaGuiLayers.FOOD_LEVEL, SurvivalCraft.id("thirst"), SurvivalHud::renderThirst);
+        event.registerAbove(VanillaGuiLayers.PLAYER_HEALTH, SurvivalCraft.id("energy"), SurvivalHud::renderEnergy);
+        event.registerAbove(VanillaGuiLayers.HOTBAR, SurvivalCraft.id("thermometer"), SurvivalHud::renderThermometer);
+        event.registerAbove(VanillaGuiLayers.CAMERA_OVERLAYS, SurvivalCraft.id("fatigue_overlay"),
+                SurvivalHud::renderFatigueOverlay);
     }
 }
