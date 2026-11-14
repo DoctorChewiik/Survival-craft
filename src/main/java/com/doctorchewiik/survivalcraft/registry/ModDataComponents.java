@@ -4,6 +4,7 @@ import java.util.function.Supplier;
 
 import com.doctorchewiik.survivalcraft.SurvivalCraft;
 import com.doctorchewiik.survivalcraft.item.JarContents;
+import com.doctorchewiik.survivalcraft.mycology.GrainBag;
 import com.mojang.serialization.Codec;
 
 import net.minecraft.core.component.DataComponentType;
@@ -35,5 +36,12 @@ public class ModDataComponents {
             () -> DataComponentType.<JarContents>builder()
                     .persistent(JarContents.CODEC)
                     .networkSynchronized(JarContents.STREAM_CODEC)
+                    .build());
+
+    // État d'un sac de grains (stérilisé, inoculé, colonisé...)
+    public static final Supplier<DataComponentType<GrainBag>> GRAIN_BAG = DATA_COMPONENTS.register("grain_bag",
+            () -> DataComponentType.<GrainBag>builder()
+                    .persistent(GrainBag.CODEC)
+                    .networkSynchronized(GrainBag.STREAM_CODEC)
                     .build());
 }

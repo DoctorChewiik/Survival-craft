@@ -13,6 +13,7 @@ import com.doctorchewiik.survivalcraft.registry.ModBlocks;
 import com.doctorchewiik.survivalcraft.registry.ModCreativeTabs;
 import com.doctorchewiik.survivalcraft.registry.ModDataComponents;
 import com.doctorchewiik.survivalcraft.registry.ModItems;
+import com.doctorchewiik.survivalcraft.registry.ModMenus;
 import com.doctorchewiik.survivalcraft.temperature.TemperatureEvents;
 import com.doctorchewiik.survivalcraft.thirst.ThirstEvents;
 import com.mojang.logging.LogUtils;
@@ -36,6 +37,7 @@ public class SurvivalCraft {
         ModBlocks.BLOCKS.register(modEventBus);
         ModBlockEntities.BLOCK_ENTITY_TYPES.register(modEventBus);
         ModItems.ITEMS.register(modEventBus);
+        ModMenus.MENUS.register(modEventBus);
         ModCreativeTabs.CREATIVE_MODE_TABS.register(modEventBus);
 
         // Réseau (synchronisation serveur -> client)

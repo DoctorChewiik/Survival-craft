@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "state=empty": {
+      "model": "survivalcraft:block/monotub_empty"
+    },
+    "state=colonizing": {
+      "model": "survivalcraft:block/monotub_colonizing"
+    },
+    "state=fruiting": {
+      "model": "survivalcraft:block/monotub_fruiting"
+    },
+    "state=contaminated": {
+      "model": "survivalcraft:block/monotub_contaminated"
+    }
+  }
+}

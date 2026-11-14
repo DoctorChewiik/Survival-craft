@@ -108,6 +108,16 @@ public class CanteenItem extends Item {
         return true;
     }
 
+    // Retire une gorgée (arrosage d'un monotub...). Renvoie false si la gourde est vide.
+    public static boolean takeSip(ItemStack stack) {
+        int sips = getSips(stack);
+        if (sips <= 0) {
+            return false;
+        }
+        setContent(stack, sips - 1, isDirty(stack));
+        return true;
+    }
+
     // Une gourde pleine, utilisée pour l'onglet créatif
     public ItemStack filled(boolean dirty) {
         ItemStack stack = new ItemStack(this);
