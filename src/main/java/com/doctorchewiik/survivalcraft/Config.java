@@ -96,6 +96,19 @@ public class Config {
 
     static {
         BUILDER.pop();
+        BUILDER.comment("Culture de champignons").push("mycology");
+    }
+
+    public static final ModConfigSpec.DoubleValue MYCOLOGY_SPEED = BUILDER
+            .comment("Multiplicateur de vitesse de colonisation et de pousse (2 = deux fois plus vite)")
+            .defineInRange("growthSpeed", 1.0, 0.01, 100.0);
+
+    public static final ModConfigSpec.BooleanValue CONTAMINATION_ENABLED = BUILDER
+            .comment("Les sacs et les monotubs peuvent être contaminés")
+            .define("contamination", true);
+
+    static {
+        BUILDER.pop();
     }
 
     static final ModConfigSpec SPEC = BUILDER.build();

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "survivalcraft:cubensis_mushroom"
+    },
+    {
+      "item": "minecraft:paper"
+    }
+  ],
+  "result": {
+    "id": "survivalcraft:cubensis_spore_print",
+    "count": 1
+  }
+}

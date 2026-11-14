@@ -1,6 +1,8 @@
 package com.doctorchewiik.survivalcraft.registry;
 
 import com.doctorchewiik.survivalcraft.SurvivalCraft;
+import com.doctorchewiik.survivalcraft.mycology.GrainBagItem;
+import com.doctorchewiik.survivalcraft.mycology.MushroomSpecies;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -32,6 +34,20 @@ public class ModCreativeTabs {
                         output.accept(ModItems.PEBBLE.get());
                         output.accept(ModItems.FLINT_KNIFE.get());
                         output.accept(ModItems.FLINT_HATCHET.get());
+                        output.accept(ModItems.CUBENSIS.get());
+                        output.accept(ModItems.COPELANDIA.get());
+                        output.accept(ModItems.OYSTER.get());
+                        output.accept(ModItems.SHIITAKE.get());
+                        output.accept(ModItems.CUBENSIS_SPORE_PRINT.get());
+                        output.accept(ModItems.COPELANDIA_SPORE_PRINT.get());
+                        output.accept(ModItems.OYSTER_SPORE_PRINT.get());
+                        output.accept(ModItems.SHIITAKE_SPORE_PRINT.get());
+                        output.accept(ModItems.GRAIN_BAG.get());
+                        // Sacs déjà colonisés, pratiques pour tester le monotub
+                        for (MushroomSpecies species : MushroomSpecies.values()) {
+                            output.accept(GrainBagItem.colonized(species));
+                        }
+                        output.accept(ModItems.MONOTUB.get());
                     })
                     .build());
 }

@@ -45,9 +45,25 @@ public final class Temperature {
     }
 
     public static float computeAmbient(ServerPlayer player) {
-        Level level = player.level();
-        BlockPos pos = player.blockPosition();
+        float ambient = environment(player.level(), player.blockPosition());
+        if (player.isInWater()) {
+            ambient -= 3f;
+        }
+        if (player.isInPowderSnow) {
+            ambient -= 4f;
+        }
+        if (player.isOnFire()) {
+            ambient += 5f;
+        }
+        ambient += clothing(player, ambient);
+        return ambient;
+    }
 
+    /**
+     * Température d'un endroit, sans tenir compte du joueur (biome, altitude, heure, pluie, sources de chaleur).
+     * Sert aussi aux blocs comme le monotub. Pour l'affichage : environ 2 °C par point (10 = 20 °C).
+     */
+    public static float environment(Level level, BlockPos pos) {
         float ambient;
         if (level.dimensionType().ultraWarm()) {
             ambient = 18f;
@@ -78,19 +94,7 @@ public final class Temperature {
                 ambient = (ambient + 9f) / 2f;
             }
         }
-
-        if (player.isInWater()) {
-            ambient -= 3f;
-        }
-        if (player.isInPowderSnow) {
-            ambient -= 4f;
-        }
-        if (player.isOnFire()) {
-            ambient += 5f;
-        }
-        ambient += heatSources(level, pos);
-        ambient += clothing(player, ambient);
-        return ambient;
+        return ambient + heatSources(level, pos);
     }
 
     // Feux, lave, torches... à quelques blocs autour du joueur

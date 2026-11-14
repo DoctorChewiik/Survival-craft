@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "survivalcraft:item/grain_bag_raw"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "survivalcraft:stage": 0.25
+      },
+      "model": "survivalcraft:item/grain_bag_sterilized"
+    },
+    {
+      "predicate": {
+        "survivalcraft:stage": 0.5
+      },
+      "model": "survivalcraft:item/grain_bag_inoculated"
+    },
+    {
+      "predicate": {
+        "survivalcraft:stage": 0.75
+      },
+      "model": "survivalcraft:item/grain_bag_colonized"
+    },
+    {
+      "predicate": {
+        "survivalcraft:stage": 1.0
+      },
+      "model": "survivalcraft:item/grain_bag_contaminated"
+    }
+  ]
+}

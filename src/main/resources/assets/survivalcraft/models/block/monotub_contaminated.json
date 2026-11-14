@@ -1,0 +1,73 @@
+{
+  "parent": "minecraft:block/block",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "glass": "minecraft:block/glass",
+    "particle": "minecraft:block/glass",
+    "dirt": "minecraft:block/coarse_dirt",
+    "top": "minecraft:block/moss_block"
+  },
+  "elements": [
+    {
+      "from": [
+        2,
+        0,
+        2
+      ],
+      "to": [
+        14,
+        6,
+        14
+      ],
+      "faces": {
+        "up": {
+          "texture": "#top"
+        },
+        "north": {
+          "texture": "#dirt"
+        },
+        "south": {
+          "texture": "#dirt"
+        },
+        "east": {
+          "texture": "#dirt"
+        },
+        "west": {
+          "texture": "#dirt"
+        },
+        "down": {
+          "texture": "#dirt"
+        }
+      }
+    },
+    {
+      "from": [
+        1,
+        0,
+        1
+      ],
+      "to": [
+        15,
+        10,
+        15
+      ],
+      "faces": {
+        "north": {
+          "texture": "#glass"
+        },
+        "south": {
+          "texture": "#glass"
+        },
+        "east": {
+          "texture": "#glass"
+        },
+        "west": {
+          "texture": "#glass"
+        },
+        "down": {
+          "texture": "#glass"
+        }
+      }
+    }
+  ]
+}

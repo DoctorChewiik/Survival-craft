@@ -4,6 +4,7 @@ import java.util.function.Supplier;
 
 import com.doctorchewiik.survivalcraft.SurvivalCraft;
 import com.doctorchewiik.survivalcraft.block.entity.JarBlockEntity;
+import com.doctorchewiik.survivalcraft.block.entity.MonotubBlockEntity;
 import com.doctorchewiik.survivalcraft.block.entity.PlacedCanteenBlockEntity;
 import com.doctorchewiik.survivalcraft.block.entity.WaterFilterBlockEntity;
 
@@ -27,4 +28,7 @@ public class ModBlockEntities {
             BLOCK_ENTITY_TYPES.register("water_filter",
                     () -> BlockEntityType.Builder.of(WaterFilterBlockEntity::new, ModBlocks.WATER_FILTER.get())
                             .build(null));
+
+    public static final Supplier<BlockEntityType<MonotubBlockEntity>> MONOTUB = BLOCK_ENTITY_TYPES.register("monotub",
+            () -> BlockEntityType.Builder.of(MonotubBlockEntity::new, ModBlocks.MONOTUB.get()).build(null));
 }
