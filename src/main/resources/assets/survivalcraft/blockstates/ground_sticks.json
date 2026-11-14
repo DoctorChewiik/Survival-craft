@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "survivalcraft:block/ground_sticks"
+      },
+      {
+        "model": "survivalcraft:block/ground_sticks",
+        "y": 90
+      },
+      {
+        "model": "survivalcraft:block/ground_sticks",
+        "y": 180
+      },
+      {
+        "model": "survivalcraft:block/ground_sticks",
+        "y": 270
+      }
+    ]
+  }
+}

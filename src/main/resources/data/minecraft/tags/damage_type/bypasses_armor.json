@@ -1,4 +1,8 @@
 {
   "replace": false,
-  "values": ["survivalcraft:dehydration"]
+  "values": [
+    "survivalcraft:dehydration",
+    "survivalcraft:hypothermia",
+    "survivalcraft:heatstroke"
+  ]
 }

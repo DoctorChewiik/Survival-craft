@@ -2,6 +2,9 @@ name: Build
 
 on: [push, pull_request]
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -23,3 +26,20 @@ jobs:
 
       - name: Build with Gradle
         run: ./gradlew build
+
+      - name: Upload mod jar
+        uses: actions/upload-artifact@v4
+        with:
+          name: survivalcraft-jar
+          path: build/libs/*.jar
+
+      # Publie le dernier .jar sur une pré-version "dev" : lien de téléchargement direct, sans connexion
+      - name: Publish dev release
+        if: github.event_name == 'push'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release delete dev --yes --cleanup-tag || true
+          gh release create dev build/libs/*.jar --prerelease --target "$GITHUB_SHA" \
+            --title "Version de test (${GITHUB_REF_NAME})" \
+            --notes "Dernière version compilée automatiquement depuis la branche ${GITHUB_REF_NAME}. Mettre le .jar dans le dossier mods (NeoForge 1.21.1)."

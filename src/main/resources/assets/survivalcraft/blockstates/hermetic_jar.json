@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "survivalcraft:block/hermetic_jar"
+    }
+  }
+}
