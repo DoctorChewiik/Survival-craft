@@ -5,6 +5,7 @@ import java.util.Optional;
 import com.doctorchewiik.survivalcraft.registry.ModItems;
 
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.item.Item;
 
@@ -47,7 +48,7 @@ public enum MushroomSpecies implements StringRepresentable {
         return slowness;
     }
 
-    public Component displayName() {
+    public MutableComponent displayName() {
         return Component.translatable("species.survivalcraft." + name);
     }
 
